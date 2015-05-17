@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="FHTW_UWP.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FHTW_Universal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded"
+    Background="{ThemeResource AppBarBackgroundThemeBrush}"
+    >
+
+    <Grid>
+        <ScrollViewer Margin="0,20,0,100">
+            <Grid>
+                <StackPanel x:Name="sp" Height="auto" VerticalAlignment="Top"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar IsSticky="True" x:Name="appBar" IsOpen="True" Margin="0" FlowDirection="RightToLeft">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="AllApps" IsCompact="False" Label="Raumplan" Click="AppBarButton_Click_2"/>
+                <AppBarButton x:Name="btnRefresh" Icon="Refresh" IsCompact="False" Label="Refresh" Click="AppBarButton_Click_1"/>
+                <AppBarButton Icon="Setting" IsCompact="False" Label="Settings" Click="AppBarButton_Click"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
